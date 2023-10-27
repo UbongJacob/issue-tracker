@@ -15,7 +15,7 @@ import Spinner from "@/app/components/Spinner";
 
 export type IssueForm = z.infer<typeof createIssueSchema>;
 
-const NewIssuesPage = () => {
+const NewIssuesPage = async () => {
   const {
     register,
     control,

@@ -15,7 +15,6 @@ const IssueDetailPage = async ({ params }: Props) => {
   const issue = await prisma.issue.findUnique({
     where: { id },
   });
-
   if (!issue) notFound();
 
   return (
