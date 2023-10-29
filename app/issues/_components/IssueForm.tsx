@@ -41,8 +41,10 @@ const IssueForm = ({ issue }: { issue?: Issue }) => {
       ? await updateIssue(data, issue.id)
       : await createIssue(data);
     setSubmitting(false);
-    if (result.ok) router.replace("/issues");
-    else setError(result.problem);
+    if (result.ok) {
+      router.replace("/issues");
+      router.refresh();
+    } else setError(result.problem);
   });
 
   return (
