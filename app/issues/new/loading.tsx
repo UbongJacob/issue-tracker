@@ -1,14 +1,3 @@
-import { Box } from "@radix-ui/themes";
+import IssueFormSkeleton from "../_components/IssueFormSkeleton";
 
-import { Skeleton } from "@/app/components";
-
-const LoadingNewIssuePage = (): JSX.Element => {
-  return (
-    <Box className="max-w-xl">
-      <Skeleton height="2.5rem" />
-      <Skeleton height="20rem" />
-    </Box>
-  );
-};
-
-export default LoadingNewIssuePage;
+export default IssueFormSkeleton;
